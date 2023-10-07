@@ -1,6 +1,7 @@
 import {Sheet, Typography} from "@mui/joy";
 import * as React from "react";
 import Box from "@mui/joy/Box";
+import ExpandableList from "./ExpandableList";
 
 export default function SideBar() {
     const course_name = 'Calculus';
@@ -20,7 +21,7 @@ export default function SideBar() {
             <Typography level="h4" component="h1">
                 {course_name}
             </Typography>
-
+            <ExpandableList />
         </div>
     </Box>);
 }

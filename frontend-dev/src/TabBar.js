@@ -9,7 +9,7 @@ import Person from '@mui/icons-material/Person';
 
 export default function TabBar() {
     return (
-        <Box component="nav" aria-label="My site" sx={{flexGrow: 1}} id={"tab-bar"}>
+        <Box component="nav" aria-label="My site" sx={{flexGrow: 1, mx: 2, py: 2}} id={"tab-bar"}>
             <List role="menubar" orientation="horizontal">
                 <ListItem role="none">
                     <ListItemButton
@@ -30,7 +30,7 @@ export default function TabBar() {
                 <ListDivider/>
                 <ListItem role="none">
                     <ListItemButton role="menuitem" component="a" href="#horizontal-list">
-                        Blog
+                        Log Out
                     </ListItemButton>
                 </ListItem>
                 <ListItem role="none" sx={{marginInlineStart: 'auto'}}>
