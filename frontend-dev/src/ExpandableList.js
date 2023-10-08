@@ -15,6 +15,8 @@ export default function ExpandableList() {
         <Box
             sx={{
                 pl: '24px',
+                width: "90%",
+                maxWidth: 200
             }}
         >
             <List

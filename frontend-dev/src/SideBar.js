@@ -1,4 +1,4 @@
-import {Sheet, Typography} from "@mui/joy";
+import {Typography} from "@mui/joy";
 import * as React from "react";
 import Box from "@mui/joy/Box";
 import ExpandableList from "./ExpandableList";
