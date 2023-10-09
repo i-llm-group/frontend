@@ -14,7 +14,7 @@ export default function LearnMoreMenu() {
 
     const [open, setOpen] = React.useState(false);
 
-    const toggleDrawer = (inOpen) => (event) => {
+    const toggleLMDrawer = (inOpen) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
@@ -24,15 +24,15 @@ export default function LearnMoreMenu() {
 
     return domReady ? (
         <Box sx={{display: 'flex'}}>
-            <Button variant="soft" color="primary" onClick={toggleDrawer(true)}>
+            <Button variant="soft" color="primary" onClick={toggleLMDrawer(true)}>
                 Learn More
             </Button>
-            <Drawer open={open} anchor="bottom" onClose={toggleDrawer(false)}
+            <Drawer open={open} anchor="bottom" onClose={toggleLMDrawer(false)}
                     container={document.getElementById('tab-bar')}>
                 <ModalClose/>
                 <DialogTitle>Learn More</DialogTitle>
                 <Box role="presentation">
-                    <Box sx={{display: 'flex', mx: 'auto', py: 2, justifyContent: 'center'}}>
+                    <Box sx={{display: 'flex', maxWidth: '80%', mx: 'auto', py: 2, justifyContent: 'center'}}>
                         <Box sx={{display: 'grid', rowGap: 2}}>
                             <Box>
                                 <Typography level='h3'>Learn More ...</Typography>

@@ -1,4 +1,4 @@
-import {ButtonGroup, Sheet, Typography} from "@mui/joy";
+import {Sheet, Typography} from "@mui/joy";
 import * as React from "react";
 import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
@@ -18,7 +18,6 @@ export default function MainCard(title, brief) {
             </Typography>
             <Typography level="body-md">{brief}</Typography>
             <Box sx={{display: 'flex', justifyContent: 'center', columnGap: 1, py: 1}}>
-                {/*<Button size="md" variant="soft" color="primary">Learn More</Button>*/}
                 <LearnMoreMenu />
                 <Button size="md" variant="soft" color="danger">Skip</Button>
             </Box>
