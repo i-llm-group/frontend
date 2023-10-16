@@ -7,7 +7,6 @@ import {KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material";
 import getData from "./LectureData";
 import List from "@mui/joy/List";
 import ListItem from "@mui/joy/ListItem";
-import Add from "@mui/icons-material/Add";
 import Drawer from "@mui/joy/Drawer";
 import ListItemButton from "@mui/joy/ListItemButton";
 

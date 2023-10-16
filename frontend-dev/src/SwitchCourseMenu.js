@@ -9,6 +9,23 @@ import IconButton from "@mui/joy/IconButton";
 import Delete from '@mui/icons-material/Delete';
 import Add from '@mui/icons-material/Add';
 import Button from "@mui/joy/Button";
+import {FetchUpload} from "./Request";
+import {Component} from "react";
+
+class UploadBox {
+    show;
+    constructor() {
+        this.show = true;
+    }
+
+    toggleShow() {
+        this.show = !this.show;
+    }
+
+    render() {
+        return (<Box sx={{display: (this.show ? 'block' : 'none')}}><FetchUpload /></Box>);
+    }
+}
 
 export default function SwitchCourseMenu() {
     const [domReady, setDomReady] = React.useState(false);
@@ -26,6 +43,8 @@ export default function SwitchCourseMenu() {
         setOpen(inOpen);
     };
 
+    let upload_box = new UploadBox();
+
     return domReady ? (
         <Box sx={{display: 'flex'}}>
             <div onClick={toggleCourseDrawer(true)}>Switch Course</div>
@@ -38,6 +57,11 @@ export default function SwitchCourseMenu() {
                         <Box sx={{display: 'grid', rowGap: 2}}>
                             <Box>
                                 <Typography level='h3'>My Courses</Typography>
+                            </Box>
+                            <Box sx={{display: 'flex', justifyContent: 'center'}}>
+                                {/*<Button sx={{display: 'flex'}} color='success' variant='soft' startDecorator={<Add/>} onClick={upload_box.toggleShow}>Add*/}
+                                {/*    a syllabus</Button>*/}
+                                {upload_box.render()}
                             </Box>
                             <Box>
                                 <List
@@ -78,9 +102,6 @@ export default function SwitchCourseMenu() {
                                         </List>
                                     </ListItem>
                                 </List>
-                            </Box>
-                            <Box sx={{display: 'flex', justifyContent: 'center'}}>
-                                <Button sx={{display: 'flex'}} color='success' variant='soft' startDecorator={<Add/>}>Add a syllabus</Button>
                             </Box>
                         </Box>
                     </Box>
